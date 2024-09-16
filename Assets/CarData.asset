@@ -25,6 +25,24 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
+      time: 0.36987722
+      value: 0.87588
+      inSlope: 0.8178323
+      outSlope: 0.8178323
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6662055
+      value: 0.9480348
+      inSlope: -0.01453575
+      outSlope: -0.01453575
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.11884864
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 1
       value: 0.5
       inSlope: -0.20890476
@@ -36,5 +54,5 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  maxSpeed: 10
-  enginePower: 5000
+  maxSpeed: 30
+  enginePower: 9000

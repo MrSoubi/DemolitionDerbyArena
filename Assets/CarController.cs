@@ -4,16 +4,8 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
-
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log(GetComponent<Rigidbody>().velocity.magnitude);
     }
 }

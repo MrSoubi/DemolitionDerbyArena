@@ -12,4 +12,6 @@ public class WheelData : ScriptableObject
     public float tireMass;
     public bool isMotorised;
     public bool isSteerable;
+    public float wheelRadius;
+    public float maxSuspensionDistance;
 }
