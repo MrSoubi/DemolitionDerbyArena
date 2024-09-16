@@ -17,7 +17,7 @@ public class Wheel : MonoBehaviour
         steerInput = 0.0f;
         if (data.isSteerable)
         {
-            steerInput = (Input.GetKey(KeyCode.RightArrow) ? 1.0f : 0.0f) - (Input.GetKey(KeyCode.LeftArrow) ? 1.0f : 0.0f);
+            steerInput = Input.GetAxis("p1_steer");
         }
         
         transform.rotation = carTransform.rotation;
@@ -63,7 +63,7 @@ public class Wheel : MonoBehaviour
     }
 
     public void Acceleration(RaycastHit tireRay){
-        float accelInput = (Input.GetKey(KeyCode.UpArrow) ? 1.0f : 0.0f) - (Input.GetKey(KeyCode.DownArrow) ? 1.0f : 0.0f);
+        float accelInput = Input.GetAxis("p1_throttle") - Input.GetAxis("p1_reverse");
 
         Vector3 accelDir = transform.forward;
         if (Mathf.Abs(accelInput) > 0.0f){
