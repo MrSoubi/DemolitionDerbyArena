@@ -8,4 +8,5 @@ public class CarData : ScriptableObject
     public AnimationCurve powerCurve;
     public float maxSpeed;
     public float enginePower;
+    public float jumpForce;
 }

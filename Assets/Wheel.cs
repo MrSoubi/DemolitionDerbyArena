@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Wheel : MonoBehaviour
 {
     [SerializeField] private Rigidbody carRigidBody;
     [SerializeField] private Transform carTransform;
     [SerializeField] private CarData carData;
+    [SerializeField] private PlayerInput input;
     [SerializeField] private WheelData data;
     [SerializeField] private GameObject mesh;
 
@@ -17,7 +19,7 @@ public class Wheel : MonoBehaviour
         steerInput = 0.0f;
         if (data.isSteerable)
         {
-            steerInput = Input.GetAxis("p1_steer");
+            steerInput = Input.GetAxis(input.steer);
         }
         
         transform.rotation = carTransform.rotation;
@@ -63,7 +65,7 @@ public class Wheel : MonoBehaviour
     }
 
     public void Acceleration(RaycastHit tireRay){
-        float accelInput = Input.GetAxis("p1_throttle") - Input.GetAxis("p1_reverse");
+        float accelInput = Input.GetAxis(input.throttle) - Input.GetAxis(input.reverse);
 
         Vector3 accelDir = transform.forward;
         if (Mathf.Abs(accelInput) > 0.0f){
@@ -72,5 +74,12 @@ public class Wheel : MonoBehaviour
             float availableTorque = carData.powerCurve.Evaluate(normalizedSpeed) * accelInput;
             carRigidBody.AddForceAtPosition(accelDir * availableTorque * carData.enginePower, transform.position);
         }
+    }
+
+    public bool isGrounded()
+    {
+        LayerMask mask = LayerMask.GetMask("Ground");
+        RaycastHit hit;
+        return Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, data.maxSuspensionDistance + data.wheelRadius, mask);
     }
 }

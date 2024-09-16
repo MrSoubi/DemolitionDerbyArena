@@ -56,3 +56,4 @@ MonoBehaviour:
     m_RotationOrder: 4
   maxSpeed: 30
   enginePower: 9000
+  jumpForce: 8000
