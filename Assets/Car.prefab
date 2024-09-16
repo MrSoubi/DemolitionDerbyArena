@@ -295,6 +295,7 @@ MonoBehaviour:
   - {fileID: 30160123384052064}
   - {fileID: 3408141145917575724}
   data: {fileID: 11400000, guid: 9c70bbb5529667796b3d711aafffeae1, type: 2}
+  input: {fileID: 0}
   rb: {fileID: 4382415354077227720}
 --- !u!65 &3528473215881244813
 BoxCollider:
@@ -470,6 +471,7 @@ MonoBehaviour:
   carRigidBody: {fileID: 4382415354077227720}
   carTransform: {fileID: 8400388834002193049}
   carData: {fileID: 11400000, guid: 9c70bbb5529667796b3d711aafffeae1, type: 2}
+  input: {fileID: 0}
   data: {fileID: 11400000, guid: c6d886e44899ad2488622de08aec5e1f, type: 2}
   mesh: {fileID: 2867111839664212185}
 --- !u!1 &1852169156612537188
@@ -1050,6 +1052,7 @@ MonoBehaviour:
   carRigidBody: {fileID: 4382415354077227720}
   carTransform: {fileID: 8400388834002193049}
   carData: {fileID: 11400000, guid: 9c70bbb5529667796b3d711aafffeae1, type: 2}
+  input: {fileID: 0}
   data: {fileID: 11400000, guid: 1d7d36a8a6c68ffeea40f307260a5933, type: 2}
   mesh: {fileID: 4285665526213699518}
 --- !u!1 &3665786190817748962
@@ -1099,6 +1102,7 @@ MonoBehaviour:
   carRigidBody: {fileID: 4382415354077227720}
   carTransform: {fileID: 8400388834002193049}
   carData: {fileID: 11400000, guid: 9c70bbb5529667796b3d711aafffeae1, type: 2}
+  input: {fileID: 0}
   data: {fileID: 11400000, guid: c6d886e44899ad2488622de08aec5e1f, type: 2}
   mesh: {fileID: 8716203588534754138}
 --- !u!1 &3853936292113642894
@@ -1517,6 +1521,7 @@ MonoBehaviour:
   carRigidBody: {fileID: 4382415354077227720}
   carTransform: {fileID: 8400388834002193049}
   carData: {fileID: 11400000, guid: 9c70bbb5529667796b3d711aafffeae1, type: 2}
+  input: {fileID: 0}
   data: {fileID: 11400000, guid: 1d7d36a8a6c68ffeea40f307260a5933, type: 2}
   mesh: {fileID: 2989327025497054480}
 --- !u!1 &5030465310114293719
@@ -1811,6 +1816,7 @@ GameObject:
   m_Component:
   - component: {fileID: 260897068961337811}
   - component: {fileID: 8298256669932373382}
+  - component: {fileID: 5610914798703982872}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -1873,6 +1879,36 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1564280435142880769}
+--- !u!114 &5610914798703982872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6591800809635199648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 64
+  m_IgnoreTag: 
+  m_TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_MinimumDistanceFromTarget: 0.1
+  m_AvoidObstacles: 1
+  m_DistanceLimit: 0
+  m_MinimumOcclusionTime: 0
+  m_CameraRadius: 0.1
+  m_Strategy: 1
+  m_MaximumEffort: 4
+  m_SmoothingTime: 0
+  m_Damping: 0
+  m_DampingWhenOccluded: 0
+  m_OptimalTargetDistance: 0
 --- !u!1 &6817199316047131553
 GameObject:
   m_ObjectHideFlags: 0
