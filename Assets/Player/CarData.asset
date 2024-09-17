@@ -57,3 +57,5 @@ MonoBehaviour:
   maxSpeed: 30
   enginePower: 9000
   jumpForce: 8000
+  airSteerForce: 400
+  boostForce: 1500

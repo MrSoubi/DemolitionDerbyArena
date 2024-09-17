@@ -8,5 +8,7 @@ public class PlayerInput : ScriptableObject
     public string throttle;
     public string reverse;
     public string steer;
+    public string pitch;
     public string jump;
+    public string boost;
 }
